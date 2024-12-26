@@ -17,7 +17,10 @@ const moveButton = () => {
       do {
         randomX = Math.random() * maxX;
         randomY = Math.random() * maxY;
-      } while (Math.abs(randomX - parseFloat(button.style.left || 0)) < 50 || Math.abs(randomY - parseFloat(button.style.top || 0)) < 50);
+      } while (
+        Math.abs(randomX - parseFloat(button.style.left || '0')) < 50 ||
+        Math.abs(randomY - parseFloat(button.style.top || '0')) < 50
+      );
 
       button.style.position = 'absolute';
       button.style.left = `${randomX}px`;
