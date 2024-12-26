@@ -38,7 +38,7 @@ const accept = () => {
   <div v-if="step === 1" class="container">
     <h1>Gostaria de saber se você quer sair comigo!! hahaha 🥰</h1>
     <div class="buttons">
-      <button @click="accept">Sim</button>
+      <button class="accept-button" @click="accept">Sim</button>
       <button
         ref="noButton"
         @mouseenter="moveButton"
@@ -74,6 +74,11 @@ h1 {
   width: 300px;
   height: 200px;
   margin: 0 auto;
+
+}
+
+.accept-button {
+  color: #ffffff;
 }
 
 button {
